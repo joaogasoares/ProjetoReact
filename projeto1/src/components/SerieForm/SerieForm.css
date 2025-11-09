@@ -1,0 +1,80 @@
+/* src/components/SerieForm/SerieForm.css */
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.serie-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.serie-form label {
+    font-weight: bold;
+    color: #333;
+    grid-column: 1 / 2; /* Coloca o rótulo na primeira coluna */
+}
+
+.serie-form input[type="text"],
+.serie-form input[type="number"],
+.serie-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    grid-column: 2 / 3; /* Coloca a entrada na segunda coluna */
+}
+
+/* Para campos que ocupam a linha toda (se precisar) ou para o botão */
+.serie-form button {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.serie-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Feedback Visual */
+.feedback {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    grid-column: 1 / -1; /* Ocupa a linha inteira */
+    text-align: center;
+}
+
+.feedback-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.feedback-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
