@@ -10,7 +10,7 @@ O **Gerenciador de Séries** é uma aplicação web desenvolvida em React que pe
 
 Veja abaixo um breve exemplo da aplicação em funcionamento (cadastro, visualização e edição/exclusão).
 
-![Exemplo do Gerenciador de Séries](/docs/demonstracao.gif)
+![Exemplo do Gerenciador de Séries](docs/demonstracao.gif)
 
 ---
 
