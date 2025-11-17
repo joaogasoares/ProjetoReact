@@ -53,7 +53,7 @@ Siga os passos abaixo para instalar e rodar a aplicação em sua máquina local.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [LINK-DO-SEU-REPOSITÓRIO]
+    git clone [https://github.com/joaogasoares/ProjetoReact](https://github.com/joaogasoares/ProjetoReact)
     cd nome-do-projeto
     ```
 
@@ -71,7 +71,9 @@ Siga os passos abaixo para instalar e rodar a aplicação em sua máquina local.
     yarn start
     ```
 
-A aplicação será aberta automaticamente no seu navegador em `http://localhost:3000`.
+A aplicação será aberta automaticamente no seu navegador em **`http://localhost:3000`**.
+
+> **Nota:** Dependendo do ambiente de desenvolvimento (como Vite ou ambientes virtualizados), a aplicação pode ser iniciada em uma porta diferente, como **`http://localhost:5173`**. Verifique o *output* do seu terminal ao executar o comando `npm start`.
 
 ---
 
@@ -82,15 +84,3 @@ Este projeto está atualmente na fase de **Desenvolvimento Frontend e Transiçã
 * O frontend está completo, utilizando um layout moderno de cartões.
 * As rotas de navegação e as operações CRUD (com dados mockados) estão funcionais.
 * A configuração do Axios para o endpoint `http://localhost:5000` está pronta para a integração com a API de backend.
-
-### Próximos Passos (Próximas Fases)
-
-* [ ] Integrar o frontend ao backend real usando o Axios para persistência de dados.
-* [ ] Refinar a experiência de usuário e responsividade em telas ultra-pequenas.
-* [ ] Implementar testes unitários para os componentes.
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença [Escolha uma licença, ex: MIT].
