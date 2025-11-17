@@ -4,7 +4,13 @@
 
 O **Gerenciador de Séries** é uma aplicação web desenvolvida em React que permite aos usuários catalogar, visualizar e gerenciar sua coleção de séries de televisão. O projeto foca em uma interface de usuário moderna e responsiva, utilizando um layout de cartões (cards) para exibir informações detalhadas de cada série, com funcionalidades completas de CRUD (Criação, Leitura, Atualização e Deleção).
 
+---
 
+## 🎥 Demonstração
+
+Veja abaixo um breve exemplo da aplicação em funcionamento (cadastro, visualização e edição/exclusão).
+
+![Exemplo do Gerenciador de Séries](/docs/Gravando%202025-11-17%20200818.gif)
 
 ---
 
