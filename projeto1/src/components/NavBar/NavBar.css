@@ -1,43 +1,66 @@
 .navbar {
-    width: 200px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
     
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+    width: 100%;
+    height: 60px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    
+    background-color: #282c34; 
+    padding: 0 15px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    
+    box-sizing: border-box; 
+}
 
-    background-color: #282c34;
-    padding: 20px 0; 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+.nav-brand a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    white-space: nowrap; 
+}
 
+.clapperboard-icon {
+    font-size: 1.8em; 
+    margin-right: 10px; 
 }
 
 .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: block; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    
+    display: flex; 
+    flex-wrap: nowrap; 
+    
+    flex-grow: 1; 
+    justify-content: flex-end; 
 }
 
 .nav-list li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #3a3f47;
-}
-
-.nav-list li:last-child {
-    border-bottom: none;
+    padding: 0 8px; 
 }
 
 .nav-list li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-}
-
-.nav-list li:hover {
-    background-color: #3a3f47;
+    color: white; 
+    text-decoration: none; 
+    font-weight: normal;
+    font-size: 0.95em; 
+    transition: color 0.2s; 
+    white-space: nowrap; 
 }
 
 .nav-list li a:hover {
-    color: #61dafb;
+    color: #61dafb; 
+}
+
+.nav-list li:hover {
+    background-color: transparent;
 }

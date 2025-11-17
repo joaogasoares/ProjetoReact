@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+body {
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    min-height: 100vh;            
+    margin: 0;                    
+    padding: 0;                   
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,4 +52,5 @@ h2 {
   font-size: 2.4em;
   line-height: 1.2;
   color: rgb(255, 255, 255);
+  text-align: center;
 }

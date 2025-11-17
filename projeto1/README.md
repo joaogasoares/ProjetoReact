@@ -1,57 +1,96 @@
-# 📚 Gerenciador de Séries - Fase 1
+# 🎬 Gerenciador de Séries (Series Manager)
 
-## Nome: `João Soares`
+## ✨ Descrição do Projeto
 
-Este projeto é a entrega da Fase 1 do Gerenciador de Séries, desenvolvido utilizando **React** e **Vite**. O objetivo principal é estabelecer a estrutura de pastas, componentes essenciais (`NavBar`, `SerieForm`, `SerieList`) e implementar a navegação e as funcionalidades básicas de **CRUD** (Criação, Leitura, Atualização e Exclusão) de forma estática (em memória).
+O **Gerenciador de Séries** é uma aplicação web desenvolvida em React que permite aos usuários catalogar, visualizar e gerenciar sua coleção de séries de televisão. O projeto foca em uma interface de usuário moderna e responsiva, utilizando um layout de cartões (cards) para exibir informações detalhadas de cada série, com funcionalidades completas de CRUD (Criação, Leitura, Atualização e Deleção).
+
+
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Funcionalidades Principais
 
-Para rodar o projeto localmente, siga os seguintes passos no seu terminal (partindo da pasta raiz `projeto1`):
+| Ícone | Funcionalidade | Descrição |
+| :---: | :--- | :--- |
+| **🏠** | **Visualização em Cartões** | Exibe a lista de séries cadastradas em um grid responsivo (3 colunas em desktop). |
+| **✏️** | **Edição** | Permite carregar e atualizar os dados de uma série existente. |
+| **🗑️** | **Exclusão** | Permite remover uma série da lista. |
+| **➕** | **Cadastro Completo** | Formulário robusto com validação para inclusão de novas séries. |
 
-1.  **Navegue até a pasta raiz** do projeto:
+### Campos do Cadastro:
+
+Todos os campos são obrigatórios para o cadastro de uma nova série:
+
+* Título
+* Número de Temporadas
+* Data de Lançamento da Temporada
+* Diretor
+* Produtora
+* Categoria
+* Data em que assistiu
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Frontend:** ReactJS (com Hooks: `useState`, `useEffect`, `useNavigate`)
+* **Roteamento:** React Router DOM
+* **Comunicação API:** Axios
+* **Estilização:** CSS puro (Flexbox e Grid)
+
+---
+
+## 💻 Como Executar o Projeto (Setup)
+
+Siga os passos abaixo para instalar e rodar a aplicação em sua máquina local.
+
+### Pré-requisitos
+
+* Node.js (versão LTS recomendada)
+* npm ou yarn
+
+### Instalação
+
+1.  **Clone o repositório:**
     ```bash
-    cd projeto1
+    git clone [LINK-DO-SEU-REPOSITÓRIO]
+    cd nome-do-projeto
     ```
 
-2.  **Instale as dependências** necessárias:
+2.  **Instale as dependências:**
     ```bash
     npm install
+    # ou
+    yarn install
     ```
 
-3.  **Inicie o servidor de desenvolvimento** do Vite:
+3.  **Inicie a aplicação:**
     ```bash
-    npm run dev
+    npm start
+    # ou
+    yarn start
     ```
 
-Após a execução, o projeto estará acessível no seu navegador, geralmente em **`http://localhost:5173/`**.
-
-### Imagem/GIF do Resultado
-
-![Gif mostrando o resultado esperado ao rodar o projeto](./docs/Tela%20esperada.gif)
+A aplicação será aberta automaticamente no seu navegador em `http://localhost:3000`.
 
 ---
 
-### Descrição dos Componentes
+## 💡 Status do Desenvolvimento
 
-| Componente | Localização | Descrição e Funcionalidade |
-| :--- | :--- | :--- |
-| **`NavBar`** | `./components/NavBar` | Componente de navegação principal. Posicionado de forma **absoluta** no topo esquerdo. Contém os links: *Página Principal*, *Sobre*, *Cadastrar Séries* e *Lista de Séries*. |
-| **`SerieForm`** | `./components/SerieForm` | Formulário para **Criação** e **Atualização** de séries. Implementa a validação básica e *feedback* visual. |
-| **`SerieList`** | `./components/SerieList` | Tabela para **Listagem** das séries. Contém os botões para **Excluir** e iniciar a **Edição** (`onEditStart`). |
-| **`SeriesPage`** | `./pages/SeriesPage` | **Componente Controlador**. Gerencia o estado central das séries e implementa a lógica do CRUD estático (Add, Update, Delete). |
+Este projeto está atualmente na fase de **Desenvolvimento Frontend e Transição para Backend**.
 
----
+* O frontend está completo, utilizando um layout moderno de cartões.
+* As rotas de navegação e as operações CRUD (com dados mockados) estão funcionais.
+* A configuração do Axios para o endpoint `http://localhost:5000` está pronta para a integração com a API de backend.
 
-## 🧪 Testes
+### Próximos Passos (Próximas Fases)
 
-* **CRUD Completo:** É possível adicionar uma nova série, visualizá-la na lista, usar o botão "Editar" para preencher o formulário e salvar a edição, e excluir o item da lista.
-
-![Gif mostrando os testes CRUD deste projeto](./docs/Testes.gif)
+* [ ] Integrar o frontend ao backend real usando o Axios para persistência de dados.
+* [ ] Refinar a experiência de usuário e responsividade em telas ultra-pequenas.
+* [ ] Implementar testes unitários para os componentes.
 
 ---
 
-## 🛠️ Conclusão
+## 📄 Licença
 
-Este projeto é apenas para fins demonstrativos e não contém mais alterações do que as necessárias para demostrar algumas funcionalidades úteis para o desenvolvimento de projetos em ReactJS.
+Este projeto está sob a licença [Escolha uma licença, ex: MIT].

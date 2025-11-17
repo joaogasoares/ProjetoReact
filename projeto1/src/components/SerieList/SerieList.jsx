@@ -1,55 +1,58 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './SerieList.css';
+import './SerieList.css'; 
 
 const SerieList = ({ series, onDelete, onEditStart }) => {
-  const navigate = useNavigate();
-
-  if (!series || series.length === 0) {
-    return <p>Nenhuma série cadastrada ainda.</p>;
-  }
 
   const handleEditClick = (serieId) => {
-    onEditStart(serieId);
-    navigate('/cadastrar');
+    onEditStart(serieId); 
   };
 
   return (
     <div className="list-container serie-list">
-      <h2>Lista de Séries Cadastradas</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th>Temporadas</th>
-            <th>Data Assistiu</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
+      <h2>Lista de Séries</h2>
+      
+      {series && series.length > 0 ? (
+        <div className="series-grid">
           {series.map((serie) => (
-            <tr key={serie.id}>
-              <td>{serie.titulo}</td>
-              <td>{serie.nTemporadas}</td>
-              <td>{serie.dataAssistiu}</td>
-              <td>
-                <button
-                  className="btn-edit"
-                  onClick={() => handleEditClick(serie.id)}
+            <div key={serie.id} className="serie-card">
+              
+              <div className="card-header">
+                <h3>{serie.titulo}</h3>
+              </div>
+              
+              <div className="card-body">
+                <p><strong>Temporadas:</strong> {serie.nTemporadas}</p>
+                <p><strong>Lançamento:</strong> {serie.dataLancamento}</p>
+                <p><strong>Diretor:</strong> {serie.diretor}</p>
+                <p><strong>Produtora:</strong> {serie.produtora}</p>
+                <p><strong>Categoria:</strong> {serie.categoria}</p>
+                <p><strong>Assistiu em:</strong> {serie.dataAssistiu}</p>
+              </div>
+              
+              <div className="card-actions">
+                <button 
+                    className="btn-edit" 
+                    onClick={() => handleEditClick(serie.id)}
+                    title="Editar Série" 
                 >
-                  Editar
+                    ✏️
                 </button>
-                <button
-                  className="btn-delete"
-                  onClick={() => onDelete(serie.id)}
+                <button 
+                    className="btn-delete" 
+                    onClick={() => onDelete(serie.id)}
+                    title="Excluir Série" 
                 >
-                  Excluir
+                    🗑️
                 </button>
-              </td>
-            </tr>
+              </div>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      ) : (
+        <div className="empty-list-message">
+          Nenhuma série cadastrada.
+        </div>
+      )}
     </div>
   );
 };
